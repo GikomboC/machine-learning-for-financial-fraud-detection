@@ -61,6 +61,11 @@ In a real system:
 
 ## Model Explainability (SHAP)
 ![SHAP Plot](images/shap_plot.png)
+
+## Probability Distribution
+![Probability Distribution](images/probability_distribution.png)
+
+
 ---
 
 ## Dataset Description
