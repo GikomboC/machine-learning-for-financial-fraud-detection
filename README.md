@@ -111,19 +111,17 @@ Metrics:
 
 ## Project Structure
 
+
+```text
 fraud-detection/
-│
 ├── data/
-│   └── financial_fraud_detection.csv        # Raw dataset used for training and analysis
-│
+│   └── financial_fraud_detection.csv
 ├── notebooks/
-│   └── fraud_detection.ipynb                # Jupyter Notebook (EDA, feature engineering, modeling)
-│
+│   └── fraud_detection.ipynb
 ├── app/
-│   └── streamlit_app.py                    # Streamlit dashboard for fraud prediction
-│
+│   └── streamlit_app.py
 ├── outputs/
-│   └── fraud_predictions.csv               # Model prediction results (generated output)
-│
-├── README.md                              # Project documentation
-└── requirements.txt                       # Python dependencies
+│   └── fraud_predictions.csv
+├── README.md
+└── requirements.txt
+```
