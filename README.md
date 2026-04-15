@@ -114,15 +114,12 @@ Metrics:
 
 ```text
 fraud-detection/
-├── data/
-│   └── financial_fraud_detection.csv
-├── notebooks/
-│   └── fraud_detection.ipynb
 ├── app/
-│   └── streamlit_app.py
+│   └── dashboard.py
 ├── outputs/
 │   └── fraud_predictions.csv
 ├── README.md
+├── model.pkl
 └── requirements.txt
 ```
 ---
