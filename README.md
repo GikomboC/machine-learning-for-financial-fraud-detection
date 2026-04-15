@@ -49,6 +49,20 @@ In production, similar systems are used in:
 ---
 
 ## Dataset Description
+## Dataset
+
+The dataset used in this project is publicly available on Kaggle:
+
+- [Financial Fraud Detection Dataset (Kaggle)](https://www.kaggle.com/datasets/sriharshaeedala/financial-fraud-detection-dataset)
+
+### Description
+This dataset is a synthetic financial dataset generated using the PaySim simulator. It mimics real-world mobile money transactions and includes both legitimate and fraudulent activities.
+
+### Key Characteristics
+- 744 time steps (30 days of transactions)
+- Multiple transaction types (CASH-IN, CASH-OUT, TRANSFER, etc.)
+- Highly imbalanced (fraud cases are rare)
+- Designed specifically for fraud detection modeling
 
 | Feature | Description |
 |--------|------------|
