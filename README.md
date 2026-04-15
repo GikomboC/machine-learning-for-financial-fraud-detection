@@ -2,6 +2,7 @@
 
 ## Overview
 This project builds an end-to-end machine learning system to detect fraudulent financial transactions.
+Keywords: fraud detection, fintech, machine learning, anomaly detection, data science
 
 The dataset contains transaction-level information such as:
 - transaction type
@@ -37,15 +38,29 @@ In production, similar systems are used in:
 
 ---
 
-### Challenges
-- Highly imbalanced dataset (fraud cases are rare)
-- Complex transaction patterns
-- Need for high recall without sacrificing precision
+### Deployment Scenario
+
+In a real system:
+
+1. Transactions stream in real-time
+2. Model assigns fraud probability
+3. High-risk transactions are flagged
+4. Human analysts review flagged cases
+
 
 ---
 ## Live Demo
 [Streamlit App](https://machine-learning-for-financial-fraud-detection-f4sj6a3e4rasnpi.streamlit.app/)
 
+---
+## Dashboard Preview
+![Dashboard](images/dashboard.png)
+
+## Feature Importance
+![Feature Importance](images/feature_importance.png)
+
+## Model Explainability (SHAP)
+![SHAP Plot](images/shap_plot.png)
 ---
 
 ## Dataset Description
