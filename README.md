@@ -9,19 +9,42 @@ The dataset contains transaction-level information such as:
 - sender and receiver balances
 - fraud labels
 
-The goal is to classify transactions as:
+It predicts whether a transaction is:
 - 0 → Legitimate
 - 1 → Fraudulent
 
 ---
 
 ## Problem Statement
-Financial fraud is a critical issue in digital transactions. Detecting fraudulent activities in real-time can prevent financial losses.
+Financial fraud is a major issue in digital payments and banking systems.
+
+Traditional rule-based systems struggle to detect modern fraud patterns.  
+Machine learning enables detection of hidden patterns in large-scale transaction data. :contentReference[oaicite:0]{index=0}
+
+---
+## Business Impact
+
+This system can be used to:
+
+- Detect fraudulent transactions in real-time
+- Reduce financial losses
+- Improve trust in digital payment systems
+
+In production, similar systems are used in:
+- Banking platforms
+- Payment gateways
+- Fraud monitoring pipelines
+
+---
 
 ### Challenges
 - Highly imbalanced dataset (fraud cases are rare)
 - Complex transaction patterns
 - Need for high recall without sacrificing precision
+
+---
+## Live Demo
+[Streamlit App](https://machine-learning-for-financial-fraud-detection-f4sj6a3e4rasnpi.streamlit.app/)
 
 ---
 
@@ -45,58 +68,70 @@ Financial fraud is a critical issue in digital transactions. Detecting fraudulen
 
 ## Project Workflow
 
-### 1. Data Loading
-- Load dataset using pandas
-- Inspect structure and shape
+### 1. Data Processing
+- Loaded and cleaned dataset
+- Removed duplicates
+- Checked missing values
 
-### 2. Data Cleaning
-- Remove duplicates
-- Check missing values
 
-### 3. Exploratory Data Analysis
+### 2. Exploratory Data Analysis
 - Fraud distribution
 - Fraud by transaction type
 - Suspicious patterns
 
-### 4. Feature Engineering
-Created new features:
+### 3. Feature Engineering
+Created key features:
 - `orig_balance_diff`
 - `dest_balance_diff`
 - `orig_zero_balance`
 - `dest_zero_balance`
 - `error_orig`
 - `error_dest`
+These capture inconsistencies in transactions, which are strong fraud indicators.
 
-### 5. Preprocessing
+---
+
+### 4. Preprocessing
 - Numeric scaling (StandardScaler)
 - Categorical encoding (OneHotEncoder)
 
-### 6. Model Building
+### 5. Modeling
 Models used:
 - Logistic Regression (baseline)
 - Random Forest (final model)
 
-### 7. Model Evaluation
-Metrics:
+### 6. Model Evaluation
+Metrics used:
 - Precision
 - Recall
 - F1 Score
 - ROC-AUC
 - PR-AUC
+Fraud detection focuses more on **recall and precision**, not accuracy.
 
-### 8. Feature Importance
-- Identify key predictors of fraud
+---
+## Model Decision Strategy
 
+Fraud detection requires balancing:
+
+- **High Recall** → Catch more fraud (fewer missed fraud cases)
+- **High Precision** → Reduce false alarms
+
+This project supports **threshold tuning**:
+
+```python
+threshold = 0.3  # Higher recall
+threshold = 0.7  # Higher precision
+```
+This reflects real-world cost-sensitive fraud detection systems.
 ---
 
 ## Results
 
-| Model | ROC-AUC | PR-AUC |
+| Model | ROC-AUC | PR-AUC | Precision | Recall |F1_score
 |------|--------|--------|
-| Logistic Regression | ~0.90+ | Moderate |
-| Random Forest | ~0.98+ | High |
-
-> Replace with actual results after running the notebook.
+| Logistic Regression | 0.995182 | 0.631581 | 0.024494 | 0.978089 | 0.047790 |
+| Random Forest | 0.999086 | 0.998138 | 1.000000 | 0.997565 | 0.998781 |
 
 ---
 
@@ -106,6 +141,15 @@ Metrics:
 - Balance inconsistencies are strong fraud indicators
 - Engineered features significantly improve model performance
 - Random Forest outperforms Logistic Regression
+
+---
+Explainability (SHAP)
+To improve transparency, SHAP was used to explain model predictions.
+This helps:
+- Understand why transactions are flagged
+- Identify key drivers of fraud
+- Improve trust in the model
+- Explainability is critical in real-world fraud systems.
 
 ---
 
@@ -127,8 +171,11 @@ fraud-detection/
 ## Streamlit Dashboard Features
 - Upload transaction data
 - Real-time fraud prediction
-- Probability scoring
-- Interactive results display
+- Fraud probability scoring
+- Summary metrics (fraud rate, counts)
+- Interactive charts
+- Download prediction results
+- SHAP explainability
 
 ## Future Improvements
 - XGBoost / LightGBM models
@@ -136,19 +183,20 @@ fraud-detection/
 - Hyperparameter tuning
 - SHAP explainability
 - Real-time API deployment
+  
 ## Technologies Used
-- python
-- pandas
+- Python
+- Pandas
 - NumPy
-- scikit-learn
-- matplotlib
+- Scikit-learn
+- Matplotlib
 - Streamlit
+- SHAP
 
 ---
 
 ## Author
-- Caleb Gikombo
-- Mechatronics Engineer | Data Scientist
+- Caleb Gikombo - Mechatronics Engineer | Data Scientist
 ---
 # License
 This project is open-source and available under the MIT License.
