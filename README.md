@@ -2,7 +2,6 @@
 
 ## Overview
 This project builds an end-to-end machine learning system to detect fraudulent financial transactions.
-Keywords: fraud detection, fintech, machine learning, anomaly detection, data science
 
 The dataset contains transaction-level information such as:
 - transaction type
@@ -120,6 +119,7 @@ Created key features:
 - `error_orig`
 - `error_dest`
 
+
 These capture inconsistencies in transactions, which are strong fraud indicators.
 
 ---
@@ -140,6 +140,7 @@ Metrics used:
 - F1 Score
 - ROC-AUC
 - PR-AUC
+
 Fraud detection focuses more on **recall and precision**, not accuracy.
 
 ---
@@ -156,6 +157,7 @@ This project supports **threshold tuning**:
 threshold = 0.3  # Higher recall
 threshold = 0.7  # Higher precision
 ```
+
 This reflects real-world cost-sensitive fraud detection systems.
 ---
 
