@@ -110,18 +110,17 @@ Metrics:
 fraud-detection/
 │
 ├── data/
-│ └── financial_fraud_detection.csv
+│   └── financial_fraud_detection.csv        # Raw dataset used for training and analysis
 │
 ├── notebooks/
-│ └── fraud_detection.ipynb
+│   └── fraud_detection.ipynb                # Jupyter Notebook (EDA, feature engineering, modeling)
 │
 ├── app/
-│ └── streamlit_app.py
+│   └── streamlit_app.py                    # Streamlit dashboard for fraud prediction
 │
 ├── outputs/
-│ └── fraud_predictions.csv
+│   └── fraud_predictions.csv               # Model prediction results (generated output)
 │
-├── README.md
-└── requirements.txt
-
+├── README.md                              # Project documentation
+└── requirements.txt                       # Python dependencies
 ---
