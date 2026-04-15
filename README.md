@@ -216,7 +216,6 @@ fraud-detection/
 - XGBoost / LightGBM models
 - SMOTE for imbalance handling
 - Hyperparameter tuning
-- SHAP explainability
 - Real-time API deployment
   
 ## Technologies Used
