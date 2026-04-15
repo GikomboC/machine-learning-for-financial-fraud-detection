@@ -143,8 +143,8 @@ This reflects real-world cost-sensitive fraud detection systems.
 
 ## Results
 
-| Model | ROC-AUC | PR-AUC | Precision | Recall |F1_score
-|------|--------|--------|
+| Model | ROC-AUC | PR-AUC | Precision | Recall | F1_score |
+|------|--------|--------|----------|-----------|----------|
 | Logistic Regression | 0.995182 | 0.631581 | 0.024494 | 0.978089 | 0.047790 |
 | Random Forest | 0.999086 | 0.998138 | 1.000000 | 0.997565 | 0.998781 |
 
