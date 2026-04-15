@@ -18,7 +18,7 @@ The goal is to classify transactions as:
 ## Problem Statement
 Financial fraud is a critical issue in digital transactions. Detecting fraudulent activities in real-time can prevent financial losses.
 
-Challenges:
+### Challenges
 - Highly imbalanced dataset (fraud cases are rare)
 - Complex transaction patterns
 - Need for high recall without sacrificing precision
@@ -38,8 +38,8 @@ Challenges:
 | nameDest | Receiver ID |
 | oldbalanceDest | Receiver balance before transaction |
 | newbalanceDest | Receiver balance after transaction |
-| isFraud | Target variable |
-| isFlaggedFraud | Flagged large illegal transactions |
+| isFraud | Target variable (0 = Legit, 1 = Fraud) |
+| isFlaggedFraud | Flag for large illegal transactions |
 
 ---
 
@@ -60,9 +60,12 @@ Challenges:
 
 ### 4. Feature Engineering
 Created new features:
-- balance differences
-- zero-balance indicators
-- transaction error features
+- `orig_balance_diff`
+- `dest_balance_diff`
+- `orig_zero_balance`
+- `dest_zero_balance`
+- `error_orig`
+- `error_dest`
 
 ### 5. Preprocessing
 - Numeric scaling (StandardScaler)
@@ -93,7 +96,7 @@ Metrics:
 | Logistic Regression | ~0.90+ | Moderate |
 | Random Forest | ~0.98+ | High |
 
-[Note: Replace with actual results after running]
+> Replace with actual results after running the notebook.
 
 ---
 
@@ -101,7 +104,26 @@ Metrics:
 
 - Fraud is concentrated in specific transaction types (TRANSFER, CASH-OUT)
 - Balance inconsistencies are strong fraud indicators
-- Engineered features significantly improve performance
+- Engineered features significantly improve model performance
 - Random Forest outperforms Logistic Regression
 
 ---
+
+## Project Structure
+
+fraud-detection/
+│
+├── data/
+│   └── financial_fraud_detection.csv        # Raw dataset used for training and analysis
+│
+├── notebooks/
+│   └── fraud_detection.ipynb                # Jupyter Notebook (EDA, feature engineering, modeling)
+│
+├── app/
+│   └── streamlit_app.py                    # Streamlit dashboard for fraud prediction
+│
+├── outputs/
+│   └── fraud_predictions.csv               # Model prediction results (generated output)
+│
+├── README.md                              # Project documentation
+└── requirements.txt                       # Python dependencies
