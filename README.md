@@ -125,6 +125,7 @@ fraud-detection/
 ├── README.md
 └── requirements.txt
 ```
+---
 
 ## Streamlit Dashboard Features
 - Upload transaction data
@@ -146,10 +147,11 @@ fraud-detection/
 - matplotlib
 - Streamlit
 
+---
 
 ## Author
-# Caleb Gikombo
-# Mechatronics Engineer | Data Scientist
-
+- Caleb Gikombo
+- Mechatronics Engineer | Data Scientist
+---
 # License
 This project is open-source and available under the MIT License.
