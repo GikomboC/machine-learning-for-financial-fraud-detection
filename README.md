@@ -125,3 +125,31 @@ fraud-detection/
 ├── README.md
 └── requirements.txt
 ```
+
+## Streamlit Dashboard Features
+- Upload transaction data
+- Real-time fraud prediction
+- Probability scoring
+- Interactive results display
+
+## Future Improvements
+- XGBoost / LightGBM models
+- SMOTE for imbalance handling
+- Hyperparameter tuning
+- SHAP explainability
+- Real-time API deployment
+## Technologies Used
+- python
+- pandas
+- NumPy
+- scikit-learn
+- matplotlib
+- Streamlit
+
+
+## Author
+# Caleb Gikombo
+# Mechatronics Engineer | Data Scientist
+
+# License
+This project is open-source and available under the MIT License.
