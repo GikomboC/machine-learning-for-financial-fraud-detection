@@ -67,8 +67,6 @@ In a real system:
 
 
 ---
-
-## Dataset Description
 ## Dataset
 
 The dataset used in this project is publicly available on Kaggle:
